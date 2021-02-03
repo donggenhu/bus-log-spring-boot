@@ -1,5 +1,7 @@
 # 基于canal记录业务日志,增量的方式
 
+构建一个用于支撑业务数据变更的starter
+
 1. 添加maven依赖dependency
 2. 启动项目后，框架会自动创建对应的数据表（配置文件 busLogTable）
 3. 数据源配置好，框架会依赖实例化JdbcTemplate
