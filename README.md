@@ -1,5 +1,6 @@
 # 基于canal记录业务日志,增量的方式
 
+项目特点就在于 简单，能快速上手, 适合处理简单业务；但是应对复杂业务场景需要自行重新BusLogCanalService接口
 构建一个用于支撑业务数据变更的starter
 
 1. 添加maven依赖dependency
