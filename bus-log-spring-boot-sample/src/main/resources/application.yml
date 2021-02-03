@@ -1,0 +1,20 @@
+
+spring:
+  datasource:
+    password: retl
+    username: retl
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://10.176.76.16:13306/retl?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+du:
+  basic:
+    bus-log:
+      enable: true
+      address: 10.176.76.16
+      port: 11111
+      destination: canal-test
+      waiteMillis: 300
+      busLogTable: bus_log_test
+      executions:
+        - '{"schema":"retl","table":"xdual","add":"测试业务 新增数据 时间: ${X}, ID: ${ID}","edit":"测试业务 修改数据 时间: [${X_OLD}] 修改为 [${X_NEW}], ID: ${ID_NEW}","delete":"测试业务 删除数据 时间: ${X}, ID: ${ID}"}'
+        - '{"schema":"retl","table":"xdual2","add":"测试业务2 新增数据 时间: ${X}, ID: ${ID}","edit":"测试业务2 修改数据 时间: [${X_OLD}] 修改为 [${X_NEW}], ID: ${ID_NEW}","delete":"测试业务2 删除数据 时间: ${X}, ID: ${ID}"}'
+
